@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+    <title>Url Sculptor</title>
+</head>
+
+<body>
+  <div class="openText">
+    <h1>URL Sculptor</h1>
+    <p>Easily chisel down long URLs and track their performance</p>
+  
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <p class="{{ category }}">{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  </div>
+
+    <form action="/" method="POST">
+      <div class="inputDiv">
+        <input type="url" name="long_url" placeholder="Enter your long URL" required>
+        <input type="text" name="custom_short_code" placeholder="Enter custom short code (optional)">
+        <button type="submit">Create URL</button>
+      </div>
+      </form>
+    </form>
+</body>
+</html>

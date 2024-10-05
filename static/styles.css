@@ -1,0 +1,117 @@
+@font-face {
+    font-family: StoneBilly;
+    src: url('STONB___.TTF');
+}
+
+body {
+    background-image: url(background.jpg);
+    background-color: tan;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;  /* Fallback font */
+    color: #333;  /* Text color for better readability */
+    margin: 0;
+    padding: 200px 0 0 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+div.openText {
+    background-color: rgba(0, 0, 0, 0.65); /* Black background with 70% opacity */
+    padding: 15px; /* Add some padding for better spacing */
+    border-radius: 15px; /* Optional: rounded corners */
+    color: #ffffff; /* Ensure text color is readable */
+    display: inline-block; /* Make the div only as wide as its content */
+    margin: 10px auto; /* Add some margin for whitespace around the text */
+}
+
+h1 {
+    font-family: StoneBilly, serif;
+    font-size: 85px;
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;  /* Darker color for contrast */
+    letter-spacing: 3px;
+}
+
+p {
+    font-family: Perpetua, serif;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;  /* Slightly darker for readability */
+    margin-bottom: 20px;
+}
+
+input {
+    font-family: Perpetua, serif;
+    width: 60%;
+    max-width: 500px;  /* Ensures input doesn’t get too large on big screens */
+    padding: 15px 20px;
+    box-sizing: border-box;
+    border: 2px solid #505050;  /* Darker border */
+    border-radius: 8px;  /* Rounded corners */
+    font-size: 25px;  /* Larger input text for better readability */
+    margin-bottom: 20px;  /* Adds spacing between input and button */
+    transition: border-color 0.3s ease;
+    background-color: #fff;  /* Clear background for input */
+    outline: none;
+}
+
+input:focus {
+    border-color: #000000;  /* Highlight input on focus */
+    border-width: 3px;
+}
+
+button {
+    padding: 10px 25px;
+    background-color: #000000;  /* Button color */
+    color: white;
+    font-family: Perpetua, serif;
+    border: solid 1px white;
+    border-radius: 8px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #000000;  /* Darker shade on hover */
+    border-width: 2px;
+}
+
+div.inputDiv {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.flash-message {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.success {
+    color: rgb(66, 211, 66);
+}
+
+.danger {
+    color: red;
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjusts the input and button size on smaller screens */
+    input, button {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 48px;  /* Reduce size of H1 on smaller screens */
+    }
+
+    p {
+        font-size: 20px;  /* Reduce paragraph text size */
+    }
+}
